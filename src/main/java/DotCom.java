@@ -3,8 +3,12 @@ import java.util.Arraylist;
 public class DotCom {
     private ArrayList<String> locationCells;
 
-    public void setLocationCells(ArrayList<String> loc) {
+    public void setLocationCells(ArrayList<String> loc) {  //setter method to update the DotCom's location
         locationCells = loc;
+    }
+
+    public void setName (String n) {
+        name = n;
     }
 
     public String CheckYourself(String userInput) {
@@ -16,6 +20,7 @@ public class DotCom {
 
             if (locationCells.isEmpty()) {  //if the list is empty then this was the killing blow
                 result = "kill";
+                System.out.println("Ouch! You sunk + " + name + " :( ");
             } else {
                 result = "hit";
             }
