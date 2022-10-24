@@ -1,31 +1,7 @@
-public class SimpleDotCom {
-    int[] locationCells;
-    int numOfHits;
+public class SimpleDotComGame{
 
-    public void setLocationCells(int[] locs) {
-        locationCells = locs;
-    }
 
-    public String CheckYourself(String stringGuess) {
-        int guess = Integer.parseInt(stringGuess);
-        String result = "miss";
-
-        for (int cell :locationCells) {
-            of (guess == cell) {
-                result = "hit";               // counts each guess as a hit
-                numOfHits++;
-
-                break;
-            }
-
-        }
-        if (numOfHits == locationCells.length) {
-            result = "kill";
-        }
-        System.out.println(result);
-        return result;
-    }
-    public static void main(String[] args) {
+public static void main(String[] args) {
         int numOfGuesses = 0; // variable to keep track of number of guesses
         GameHelper helper = new GameHelper();
 
@@ -46,5 +22,4 @@ public class SimpleDotCom {
             }
         }
     }
-
 }
