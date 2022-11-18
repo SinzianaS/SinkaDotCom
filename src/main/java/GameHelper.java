@@ -1,29 +1,7 @@
-import java.util.ArrayList;
+public class GameHelper {
+    private static final String alphabet = "abcdefg";
+    private int gridLength = 7;
+    private int gridSize = 49;
+    
 
-public class DotCom {
-    private ArrayList <String> locationCells;           //ArrayList of cell locations
-    private String name;                                //the DotComs name
-
-    public void setLocationCells(ArrayList<String> loc) {
-        locationCells = loc;
-    }
-
-    public void setName(String n) {
-        name = n;
-    }
-
-    public String chechYourself(String userInput) {
-        String result = "miss";
-        int index = locationCells.indexOf(userInput);
-        if (index > 0 ) {
-            locationCells.remove(index);
-            if (locationCells.isEmpty()) {
-                result = "kill";
-                System.out.println("Ouch! You sunk " + name + " : (");
-            } else {
-                result = "hit";
-            }
-        }
-        return result;
-    }
 }
